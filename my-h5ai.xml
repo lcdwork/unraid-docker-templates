@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>h5ai</Name>
+  <Repository>sillywhale/h5ai</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1600832521</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>860</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/h5ai</HostDir>
+      <ContainerDir>/h5ai</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/development</HostDir>
+      <ContainerDir>/h5ai/development</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/isos/</HostDir>
+      <ContainerDir>/h5ai/isos</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/learning/</HostDir>
+      <ContainerDir>/h5ai/learning</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/software/</HostDir>
+      <ContainerDir>/h5ai/software</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/media/</HostDir>
+      <ContainerDir>/h5ai/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port 1" Target="80" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 80" Type="Port" Display="always" Required="false" Mask="false">860</Config>
+  <Config Name="Files" Target="/h5ai" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /h5ai" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/h5ai</Config>
+  <Config Name="Volume 1" Target="/h5ai/development" Default="" Mode="ro" Description="&#x5BB9;&#x5668; Path: /h5ai/development" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/development</Config>
+  <Config Name="Volume 3" Target="/h5ai/isos" Default="" Mode="ro" Description="&#x5BB9;&#x5668; Path: /h5ai/isos" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/isos/</Config>
+  <Config Name="Volume 4" Target="/h5ai/learning" Default="" Mode="ro" Description="&#x5BB9;&#x5668; Path: /h5ai/learning" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/learning/</Config>
+  <Config Name="Volume 6" Target="/h5ai/software" Default="" Mode="ro" Description="&#x5BB9;&#x5668; Path: /h5ai/software" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/software/</Config>
+  <Config Name="Volume2" Target="/h5ai/media" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /h5ai/media" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/</Config>
+</Container>

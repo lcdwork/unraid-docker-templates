@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>vsftpd</Name>
+  <Repository>fauria/vsftpd</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1600832452</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>820</HostPort>
+        <ContainerPort>20</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>821</HostPort>
+        <ContainerPort>21</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>21100-21110</HostPort>
+        <ContainerPort>21100-21110</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/vsftpd/home</HostDir>
+      <ContainerDir>/home/vsftpd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/vsftpd/logs</HostDir>
+      <ContainerDir>/var/log/vsftpd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/development/</HostDir>
+      <ContainerDir>/home/vsftpd/root/development</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/media/</HostDir>
+      <ContainerDir>/home/vsftpd/root/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/isos/</HostDir>
+      <ContainerDir>/home/vsftpd/root/isos</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/learning/</HostDir>
+      <ContainerDir>/home/vsftpd/root/learning</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/software/</HostDir>
+      <ContainerDir>/home/vsftpd/root/software</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>10.0.0.8</Value>
+      <Name>PASV_ADDRESS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>21100</Value>
+      <Name>PASV_MIN_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>21110</Value>
+      <Name>PASV_MAX_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0666</Value>
+      <Name>FILE_OPEN_MODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>077</Value>
+      <Name>LOCAL_UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>root</Value>
+      <Name>FTP_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>share123</Value>
+      <Name>FTP_PASS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Port 1" Target="20" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 20" Type="Port" Display="always" Required="false" Mask="false">820</Config>
+  <Config Name="Port 2" Target="21" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 21" Type="Port" Display="always" Required="false" Mask="false">821</Config>
+  <Config Name="home" Target="/home/vsftpd" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /home/vsftpd" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/vsftpd/home</Config>
+  <Config Name="logs" Target="/var/log/vsftpd" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /var/log/vsftpd" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/vsftpd/logs</Config>
+  <Config Name="PASV_ADDRESS" Target="PASV_ADDRESS" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PASV_ADDRESS" Type="Variable" Display="always" Required="false" Mask="false">10.0.0.8</Config>
+  <Config Name="PASV_MIN_PORT" Target="PASV_MIN_PORT" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PASV_MIN_PORT" Type="Variable" Display="always" Required="false" Mask="false">21100</Config>
+  <Config Name="PASV_MAX_PORT" Target="PASV_MAX_PORT" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PASV_MAX_PORT" Type="Variable" Display="always" Required="false" Mask="false">21110</Config>
+  <Config Name="FILE_OPEN_MODE" Target="FILE_OPEN_MODE" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: FILE_OPEN_MODE" Type="Variable" Display="always" Required="false" Mask="false">0666</Config>
+  <Config Name="LOCAL_UMASK" Target="LOCAL_UMASK" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: LOCAL_UMASK" Type="Variable" Display="always" Required="false" Mask="false">077</Config>
+  <Config Name="FTP_USER" Target="FTP_USER" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: FTP_USER" Type="Variable" Display="always" Required="false" Mask="false">root</Config>
+  <Config Name="FTP_PASS" Target="FTP_PASS" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: FTP_PASS" Type="Variable" Display="always" Required="false" Mask="false">share123</Config>
+  <Config Name="Ports" Target="21100-21110" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 21100-21110" Type="Port" Display="always" Required="false" Mask="false">21100-21110</Config>
+  <Config Name="development" Target="/home/vsftpd/root/development" Default="" Mode="rw" Description="Container Path: /home/vsftpd/root/development" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/development/</Config>
+  <Config Name="documents" Target="/home/vsftpd/root/media" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /home/vsftpd/root/documents" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/</Config>
+  <Config Name="isos" Target="/home/vsftpd/root/isos" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /home/vsftpd/root/isos" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/isos/</Config>
+  <Config Name="learning" Target="/home/vsftpd/root/learning" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /home/vsftpd/root/learning" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/learning/</Config>
+  <Config Name="software" Target="/home/vsftpd/root/software" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /home/vsftpd/root/software" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/software/</Config>
+</Container>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>mysql</Name>
+  <Repository>mysql:5.7.31</Repository>
+  <Registry>https://registry.hub.docker.com/_/mysql/</Registry>
+  <Network>server</Network>
+  <MyIP>172.20.0.2</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=38930.0</Support>
+  <Project/>
+  <Overview>Official docker image for mysql database server.&#xD;
+	Set the database name, root password, mysql user name, and mysql user password.</Overview>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/jshridha/templates/master/Bungy/mysql.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/docker-library/docs/master/mysql/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1601348790</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Official docker image for mysql database server.&#xD;
+	Set the database name, root password, mysql user name, and mysql user password.</Description>
+  <Networking>
+    <Mode>server</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3305</HostPort>
+        <ContainerPort>3306</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mysql</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>lcdlwj</Value>
+      <Name>MYSQL_ROOT_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="3306" Default="3306" Mode="tcp" Description="Container Port: 3306" Type="Port" Display="always" Required="true" Mask="false">3305</Config>
+  <Config Name="Host Path 1" Target="/var/lib/mysql" Default="/mnt/user/appdata/mysql" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mysql</Config>
+  <Config Name="Key 1" Target="MYSQL_ROOT_PASSWORD" Default="root_password" Mode="" Description="Container Variable: MYSQL_ROOT_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">lcdlwj</Config>
+</Container>
